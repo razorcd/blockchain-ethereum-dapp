@@ -1,23 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>MetaCoin - Truffle Webpack Demo w/ Frontend</title>
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
   <script src="./app.js"></script>
 </head>
 <body>
-  <h1>MetaCoin</h1>
-  <h2>Example Truffle Dapp</h2>
-  <h3>You have <span class="black"><span id="balance"></span> META</span></h3>
+  <h1>Data Store</h1>
+  <h2>Demo Truffle Dapp</h2>
+  <h3>Data count <span class="black"><span id="mapCount">-</span></h3>
 
   <br>
-  <h1>Send MetaCoin</h1>
-  <br><label for="amount">Amount:</label><input type="text" id="amount" placeholder="e.g., 95"></input>
-  <br><label for="receiver">To Address:</label><input type="text" id="receiver" placeholder="e.g., 0x93e66d9baea28c17d9fc393b53e3fbdd76899dae"></input>
-  <br><br><button id="send" onclick="App.sendCoin()">Send MetaCoin</button>
+  <h1>Add Data</h1>
+  <br><label for="id">Id:</label><input type="text" id="id" placeholder="e.g., 000012"></input>
+  <br><label for="name">Name:</label><input type="text" id="name" placeholder="e.g., abc"></input>
+  <br><label for="secret">Secret:</label><input type="text" id="secret" placeholder="e.g., secret data"></input>
+  <br><br><button id="send" onclick="App.addNewData()">Add</button>
   <br><br>
   <span id="status"></span>
-  <br>
-  <span class="hint"><strong>Hint:</strong> open the browser developer console to view any errors and warnings.</span>
 </body>
 </html>

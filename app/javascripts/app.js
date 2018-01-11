@@ -6,10 +6,10 @@ import { default as Web3} from 'web3';
 import { default as contract } from 'truffle-contract'
 
 // Import our contract artifacts and turn them into usable abstractions.
-import metacoin_artifacts from '../../build/contracts/MetaCoin.json'
+import datastore_artifacts from '../../build/contracts/DataStore.json'
 
-// MetaCoin is our usable abstraction, which we'll use through the code below.
-var MetaCoin = contract(metacoin_artifacts);
+// DataStore is our usable abstraction, which we'll use through the code below.
+var DataStore = contract(datastore_artifacts);
 
 // The following code is simple to show off interacting with your contracts.
 // As your needs grow you will likely need to change its form and structure.
@@ -21,13 +21,13 @@ window.App = {
   start: function() {
     var self = this;
 
-    // Bootstrap the MetaCoin abstraction for Use.
-    MetaCoin.setProvider(web3.currentProvider);
+    // Bootstrap the DataStore abstraction for Use.
+    DataStore.setProvider(web3.currentProvider);
 
     // Get the initial account balance so it can be displayed.
     web3.eth.getAccounts(function(err, accs) {
       if (err != null) {
-        alert("There was an error fetching your accounts.");
+        alert("There was an error fetching your accounts. Make sure MetaMask Chrome extension is installed.");
         return;
       }
 
@@ -38,9 +38,24 @@ window.App = {
 
       accounts = accs;
       account = accounts[0];
+      // web3.eth.defaultAccount = account;
+      // self.buildContracts();
 
-      self.refreshBalance();
+      self.refreshMapCount();
     });
+  },
+
+  buildContracts() {
+    let contracts = {};
+    let meta;
+
+    let {contract_name = ''} = datastore_artifacts;
+    meta = contract(datastore_artifacts);
+    meta.setProvider(web3.currentProvider);
+    meta.defaults({from: web3.eth.coinbase});
+    contracts[contract_name] = meta;
+
+    return contracts;
   },
 
   setStatus: function(message) {
@@ -48,40 +63,41 @@ window.App = {
     status.innerHTML = message;
   },
 
-  refreshBalance: function() {
+  refreshMapCount: function() {
     var self = this;
 
-    var meta;
-    MetaCoin.deployed().then(function(instance) {
-      meta = instance;
-      return meta.getBalance.call(account, {from: account});
-    }).then(function(value) {
-      var balance_element = document.getElementById("balance");
-      balance_element.innerHTML = value.valueOf();
+    var ds;
+    DataStore.deployed().then(function(instance) {
+      ds = instance;
+      return ds.GetMapCount.call();
+    }).then(function(mapCount) {
+      var balance_element = document.getElementById("mapCount");
+      balance_element.innerHTML = mapCount.valueOf();
     }).catch(function(e) {
       console.log(e);
-      self.setStatus("Error getting balance; see log.");
+      self.setStatus("Error getting map count; see log.");
     });
   },
 
-  sendCoin: function() {
+  addNewData: function() {
     var self = this;
 
-    var amount = parseInt(document.getElementById("amount").value);
-    var receiver = document.getElementById("receiver").value;
+    var id = parseInt(document.getElementById("id").value);
+    var name = document.getElementById("name").value;
+    var secret = document.getElementById("secret").value;
 
     this.setStatus("Initiating transaction... (please wait)");
 
-    var meta;
-    MetaCoin.deployed().then(function(instance) {
-      meta = instance;
-      return meta.sendCoin(receiver, amount, {from: account});
+    var ds;
+    DataStore.deployed().then(function(instance) {
+      ds = instance;
+      return ds.AddNewData(id, name, secret);
     }).then(function() {
       self.setStatus("Transaction complete!");
-      self.refreshBalance();
+      self.refreshMapCount();
     }).catch(function(e) {
       console.log(e);
-      self.setStatus("Error sending coin; see log.");
+      self.setStatus("Error adding data; see log.");
     });
   }
 };
@@ -89,7 +105,7 @@ window.App = {
 window.addEventListener('load', function() {
   // Checking if Web3 has been injected by the browser (Mist/MetaMask)
   if (typeof web3 !== 'undefined') {
-    console.warn("Using web3 detected from external source. If you find that your accounts don't appear or you have 0 MetaCoin, ensure you've configured that source properly. If using MetaMask, see the following link. Feel free to delete this warning. :) http://truffleframework.com/tutorials/truffle-and-metamask")
+    console.warn("Using web3 detected from external source. If you find that your accounts don't appear, ensure you've configured that source properly. If using MetaMask, see the following link. http://truffleframework.com/tutorials/truffle-and-metamask")
     // Use Mist/MetaMask's provider
     window.web3 = new Web3(web3.currentProvider);
   } else {
