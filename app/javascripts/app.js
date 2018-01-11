@@ -91,7 +91,7 @@ window.App = {
     var ds;
     DataStore.deployed().then(function(instance) {
       ds = instance;
-      return ds.AddNewData(id, name, secret);
+      return ds.AddNewData(id, name, secret, {from: account});  // {from: account}  is needed to perform transactions !!!
     }).then(function() {
       self.setStatus("Transaction complete!");
       self.refreshMapCount();
