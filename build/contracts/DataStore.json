@@ -1,0 +1,1772 @@
+{
+  "contractName": "DataStore",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "Id",
+          "type": "uint256"
+        },
+        {
+          "name": "Name",
+          "type": "string"
+        },
+        {
+          "name": "Secret",
+          "type": "string"
+        }
+      ],
+      "name": "AddNewData",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "number",
+          "type": "uint16"
+        }
+      ],
+      "name": "GetDataByNumber",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        },
+        {
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "GetMapCount",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint16"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x60606040526000600160006101000a81548161ffff021916908361ffff160217905550341561002d57600080fd5b6106c38061003c6000396000f300606060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806308590b1d1461005c578063a495b90014610105578063c60fabc414610226575b600080fd5b341561006757600080fd5b610103600480803590602001909190803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509190803590602001908201803590602001908080601f01602080910402602001604051908101604052809392919081815260200183838082843782019150505050505091905050610257565b005b341561011057600080fd5b61012a600480803561ffff16906020019091905050610396565b604051808060200186815260200185815260200184815260200180602001838103835288818151815260200191508051906020019080838360005b83811015610180578082015181840152602081019050610165565b50505050905090810190601f1680156101ad5780820380516001836020036101000a031916815260200191505b50838103825284818151815260200191508051906020019080838360005b838110156101e65780820151818401526020810190506101cb565b50505050905090810190601f1680156102135780820380516001836020036101000a031916815260200191505b5097505050505050505060405180910390f35b341561023157600080fd5b610239610576565b604051808261ffff1661ffff16815260200191505060405180910390f35b61025f61058e565b83816020018181525050828160000181905250818160800181905250428160600181815250506000600160009054906101000a900461ffff1661ffff161415156102d95760008060018060009054906101000a900461ffff160361ffff168152602001908152602001600020600101548160400181815250505b80600080600160009054906101000a900461ffff1661ffff168152602001908152602001600020600082015181600001908051906020019061031c9291906105ca565b5060208201518160010155604082015181600201556060820151816003015560808201518160040190805190602001906103579291906105ca565b509050506001600081819054906101000a900461ffff168092919060010191906101000a81548161ffff021916908361ffff1602179055505050505050565b61039e61064a565b60008060006103ab61064a565b6000808761ffff1681526020019081526020016000206000016000808861ffff168152602001908152602001600020600101546000808961ffff168152602001908152602001600020600201546000808a61ffff168152602001908152602001600020600301546000808b61ffff168152602001908152602001600020600401848054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156104c05780601f10610495576101008083540402835291602001916104c0565b820191906000526020600020905b8154815290600101906020018083116104a357829003601f168201915b50505050509450808054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561055c5780601f106105315761010080835404028352916020019161055c565b820191906000526020600020905b81548152906001019060200180831161053f57829003601f168201915b505050505090509450945094509450945091939590929450565b6000600160009054906101000a900461ffff16905090565b60a0604051908101604052806105a261065e565b81526020016000815260200160008152602001600081526020016105c461065e565b81525090565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061060b57805160ff1916838001178555610639565b82800160010185558215610639579182015b8281111561063857825182559160200191906001019061061d565b5b5090506106469190610672565b5090565b602060405190810160405280600081525090565b602060405190810160405280600081525090565b61069491905b80821115610690576000816000905550600101610678565b5090565b905600a165627a7a72305820ded9919e4d0cc757a5598a493ae703927e824d9c55f9194a6847dc9fab33ff2f0029",
+  "deployedBytecode": "0x606060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806308590b1d1461005c578063a495b90014610105578063c60fabc414610226575b600080fd5b341561006757600080fd5b610103600480803590602001909190803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509190803590602001908201803590602001908080601f01602080910402602001604051908101604052809392919081815260200183838082843782019150505050505091905050610257565b005b341561011057600080fd5b61012a600480803561ffff16906020019091905050610396565b604051808060200186815260200185815260200184815260200180602001838103835288818151815260200191508051906020019080838360005b83811015610180578082015181840152602081019050610165565b50505050905090810190601f1680156101ad5780820380516001836020036101000a031916815260200191505b50838103825284818151815260200191508051906020019080838360005b838110156101e65780820151818401526020810190506101cb565b50505050905090810190601f1680156102135780820380516001836020036101000a031916815260200191505b5097505050505050505060405180910390f35b341561023157600080fd5b610239610576565b604051808261ffff1661ffff16815260200191505060405180910390f35b61025f61058e565b83816020018181525050828160000181905250818160800181905250428160600181815250506000600160009054906101000a900461ffff1661ffff161415156102d95760008060018060009054906101000a900461ffff160361ffff168152602001908152602001600020600101548160400181815250505b80600080600160009054906101000a900461ffff1661ffff168152602001908152602001600020600082015181600001908051906020019061031c9291906105ca565b5060208201518160010155604082015181600201556060820151816003015560808201518160040190805190602001906103579291906105ca565b509050506001600081819054906101000a900461ffff168092919060010191906101000a81548161ffff021916908361ffff1602179055505050505050565b61039e61064a565b60008060006103ab61064a565b6000808761ffff1681526020019081526020016000206000016000808861ffff168152602001908152602001600020600101546000808961ffff168152602001908152602001600020600201546000808a61ffff168152602001908152602001600020600301546000808b61ffff168152602001908152602001600020600401848054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156104c05780601f10610495576101008083540402835291602001916104c0565b820191906000526020600020905b8154815290600101906020018083116104a357829003601f168201915b50505050509450808054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561055c5780601f106105315761010080835404028352916020019161055c565b820191906000526020600020905b81548152906001019060200180831161053f57829003601f168201915b505050505090509450945094509450945091939590929450565b6000600160009054906101000a900461ffff16905090565b60a0604051908101604052806105a261065e565b81526020016000815260200160008152602001600081526020016105c461065e565b81525090565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061060b57805160ff1916838001178555610639565b82800160010185558215610639579182015b8281111561063857825182559160200191906001019061061d565b5b5090506106469190610672565b5090565b602060405190810160405280600081525090565b602060405190810160405280600081525090565b61069491905b80821115610690576000816000905550600101610678565b5090565b905600a165627a7a72305820ded9919e4d0cc757a5598a493ae703927e824d9c55f9194a6847dc9fab33ff2f0029",
+  "sourceMap": "26:900:0:-;;;233:1;217:17;;;;;;;;;;;;;;;;;;;;26:900;;;;;;;;;;;;;;",
+  "deployedSourceMap": "26:900:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;241:367;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;704:220;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:2;8:100;;;99:1;94:3;90;84:5;80:1;75:3;71;64:6;52:2;49:1;45:3;40:15;;8:100;;;12:14;3:109;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1;8:100;33:3;30:1;27:2;8:100;;;99:1;94:3;90;84:5;80:1;75:3;71;64:6;52:2;49:1;45:3;40:15;;8:100;;;12:14;3:109;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;614:84:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;241:367;315:19;;:::i;:::-;357:2;344:7;:10;;:15;;;;;384:4;369:7;:12;;:19;;;;415:6;398:7;:14;;:23;;;;451:3;431:7;:17;;:23;;;;;481:1;469:8;;;;;;;;;;;:13;;;;465:83;;;519:3;:15;532:1;523:8;;;;;;;;;;;:10;519:15;;;;;;;;;;;;;:18;;;498:7;:18;;:39;;;;;465:83;574:7;558:3;:13;562:8;;;;;;;;;;;558:13;;;;;;;;;;;;;:23;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;591:8;;:10;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;241:367;;;;:::o;704:220::-;765:6;;:::i;:::-;773:4;779;785;791:6;;:::i;:::-;817:3;:11;821:6;817:11;;;;;;;;;;;;;:16;;835:3;:11;839:6;835:11;;;;;;;;;;;;;:14;;;851:3;:11;855:6;851:11;;;;;;;;;;;;;:22;;;875:3;:11;879:6;875:11;;;;;;;;;;;;;:21;;;898:3;:11;902:6;898:11;;;;;;;;;;;;;:18;;809:108;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;704:220;;;;;;;:::o;614:84::-;658:6;683:8;;;;;;;;;;;676:15;;614:84;:::o;26:900::-;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity ^0.4.17;\n\ncontract DataStore {\n    struct Data {\n        string Name;\n        uint Id;\n        uint PreviousId;\n        uint Timestamp;\n        string Secret;\n    }\n\n    mapping(uint => Data) Map;\n    uint16 MapCount=0;\n\n    function AddNewData(uint Id, string Name, string Secret) public {\n        Data memory newData;\n        newData.Id = Id;\n        newData.Name = Name;\n        newData.Secret = Secret;\n        newData.Timestamp = now;\n\n        if (MapCount != 0) {\n            newData.PreviousId = Map[MapCount-1].Id;\n        }\n\n        Map[MapCount] = newData;\n        MapCount++;\n    }\n\n    function GetMapCount() public view returns (uint16) {\n        return MapCount;\n    }\n\n    function GetDataByNumber(uint16 number) public view returns (string, uint, uint, uint, string) {\n        return (Map[number].Name, Map[number].Id, Map[number].PreviousId, Map[number].Timestamp, Map[number].Secret);\n    }\n}\n",
+  "sourcePath": "/mnt/EXT380/Pers/projects/personal/blockchain-demo-api/contracts/DataStore.sol",
+  "ast": {
+    "attributes": {
+      "absolutePath": "/mnt/EXT380/Pers/projects/personal/blockchain-demo-api/contracts/DataStore.sol",
+      "exportedSymbols": {
+        "DataStore": [
+          128
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.4",
+            ".17"
+          ]
+        },
+        "id": 1,
+        "name": "PragmaDirective",
+        "src": "0:24:0"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            128
+          ],
+          "name": "DataStore",
+          "scope": 129
+        },
+        "children": [
+          {
+            "attributes": {
+              "canonicalName": "DataStore.Data",
+              "name": "Data",
+              "scope": 128,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "Name",
+                  "scope": 12,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string storage pointer",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string storage pointer"
+                    },
+                    "id": 2,
+                    "name": "ElementaryTypeName",
+                    "src": "73:6:0"
+                  }
+                ],
+                "id": 3,
+                "name": "VariableDeclaration",
+                "src": "73:11:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "Id",
+                  "scope": 12,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 4,
+                    "name": "ElementaryTypeName",
+                    "src": "94:4:0"
+                  }
+                ],
+                "id": 5,
+                "name": "VariableDeclaration",
+                "src": "94:7:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "PreviousId",
+                  "scope": 12,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 6,
+                    "name": "ElementaryTypeName",
+                    "src": "111:4:0"
+                  }
+                ],
+                "id": 7,
+                "name": "VariableDeclaration",
+                "src": "111:15:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "Timestamp",
+                  "scope": 12,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 8,
+                    "name": "ElementaryTypeName",
+                    "src": "136:4:0"
+                  }
+                ],
+                "id": 9,
+                "name": "VariableDeclaration",
+                "src": "136:14:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "Secret",
+                  "scope": 12,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string storage pointer",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string storage pointer"
+                    },
+                    "id": 10,
+                    "name": "ElementaryTypeName",
+                    "src": "160:6:0"
+                  }
+                ],
+                "id": 11,
+                "name": "VariableDeclaration",
+                "src": "160:13:0"
+              }
+            ],
+            "id": 12,
+            "name": "StructDefinition",
+            "src": "51:129:0"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "Map",
+              "scope": 128,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "mapping(uint256 => struct DataStore.Data storage ref)",
+              "value": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "type": "mapping(uint256 => struct DataStore.Data storage ref)"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 13,
+                    "name": "ElementaryTypeName",
+                    "src": "194:4:0"
+                  },
+                  {
+                    "attributes": {
+                      "contractScope": null,
+                      "name": "Data",
+                      "referencedDeclaration": 12,
+                      "type": "struct DataStore.Data storage pointer"
+                    },
+                    "id": 14,
+                    "name": "UserDefinedTypeName",
+                    "src": "202:4:0"
+                  }
+                ],
+                "id": 15,
+                "name": "Mapping",
+                "src": "186:21:0"
+              }
+            ],
+            "id": 16,
+            "name": "VariableDeclaration",
+            "src": "186:25:0"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "MapCount",
+              "scope": 128,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "uint16",
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "uint16",
+                  "type": "uint16"
+                },
+                "id": 17,
+                "name": "ElementaryTypeName",
+                "src": "217:6:0"
+              },
+              {
+                "attributes": {
+                  "argumentTypes": null,
+                  "hexvalue": "30",
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "lValueRequested": false,
+                  "subdenomination": null,
+                  "token": "number",
+                  "type": "int_const 0",
+                  "value": "0"
+                },
+                "id": 18,
+                "name": "Literal",
+                "src": "233:1:0"
+              }
+            ],
+            "id": 19,
+            "name": "VariableDeclaration",
+            "src": "217:17:0"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "implemented": true,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "AddNewData",
+              "payable": false,
+              "scope": 128,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "Id",
+                      "scope": 81,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 20,
+                        "name": "ElementaryTypeName",
+                        "src": "261:4:0"
+                      }
+                    ],
+                    "id": 21,
+                    "name": "VariableDeclaration",
+                    "src": "261:7:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "Name",
+                      "scope": 81,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string memory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string storage pointer"
+                        },
+                        "id": 22,
+                        "name": "ElementaryTypeName",
+                        "src": "270:6:0"
+                      }
+                    ],
+                    "id": 23,
+                    "name": "VariableDeclaration",
+                    "src": "270:11:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "Secret",
+                      "scope": 81,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string memory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string storage pointer"
+                        },
+                        "id": 24,
+                        "name": "ElementaryTypeName",
+                        "src": "283:6:0"
+                      }
+                    ],
+                    "id": 25,
+                    "name": "VariableDeclaration",
+                    "src": "283:13:0"
+                  }
+                ],
+                "id": 26,
+                "name": "ParameterList",
+                "src": "260:37:0"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 27,
+                "name": "ParameterList",
+                "src": "305:0:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "assignments": [
+                        null
+                      ],
+                      "initialValue": null
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "newData",
+                          "scope": 81,
+                          "stateVariable": false,
+                          "storageLocation": "memory",
+                          "type": "struct DataStore.Data memory",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "contractScope": null,
+                              "name": "Data",
+                              "referencedDeclaration": 12,
+                              "type": "struct DataStore.Data storage pointer"
+                            },
+                            "id": 28,
+                            "name": "UserDefinedTypeName",
+                            "src": "315:4:0"
+                          }
+                        ],
+                        "id": 29,
+                        "name": "VariableDeclaration",
+                        "src": "315:19:0"
+                      }
+                    ],
+                    "id": 30,
+                    "name": "VariableDeclarationStatement",
+                    "src": "315:19:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "Id",
+                              "referencedDeclaration": 5,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 29,
+                                  "type": "struct DataStore.Data memory",
+                                  "value": "newData"
+                                },
+                                "id": 31,
+                                "name": "Identifier",
+                                "src": "344:7:0"
+                              }
+                            ],
+                            "id": 33,
+                            "name": "MemberAccess",
+                            "src": "344:10:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 21,
+                              "type": "uint256",
+                              "value": "Id"
+                            },
+                            "id": 34,
+                            "name": "Identifier",
+                            "src": "357:2:0"
+                          }
+                        ],
+                        "id": 35,
+                        "name": "Assignment",
+                        "src": "344:15:0"
+                      }
+                    ],
+                    "id": 36,
+                    "name": "ExpressionStatement",
+                    "src": "344:15:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "string memory"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "Name",
+                              "referencedDeclaration": 3,
+                              "type": "string memory"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 29,
+                                  "type": "struct DataStore.Data memory",
+                                  "value": "newData"
+                                },
+                                "id": 37,
+                                "name": "Identifier",
+                                "src": "369:7:0"
+                              }
+                            ],
+                            "id": 39,
+                            "name": "MemberAccess",
+                            "src": "369:12:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 23,
+                              "type": "string memory",
+                              "value": "Name"
+                            },
+                            "id": 40,
+                            "name": "Identifier",
+                            "src": "384:4:0"
+                          }
+                        ],
+                        "id": 41,
+                        "name": "Assignment",
+                        "src": "369:19:0"
+                      }
+                    ],
+                    "id": 42,
+                    "name": "ExpressionStatement",
+                    "src": "369:19:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "string memory"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "Secret",
+                              "referencedDeclaration": 11,
+                              "type": "string memory"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 29,
+                                  "type": "struct DataStore.Data memory",
+                                  "value": "newData"
+                                },
+                                "id": 43,
+                                "name": "Identifier",
+                                "src": "398:7:0"
+                              }
+                            ],
+                            "id": 45,
+                            "name": "MemberAccess",
+                            "src": "398:14:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 25,
+                              "type": "string memory",
+                              "value": "Secret"
+                            },
+                            "id": 46,
+                            "name": "Identifier",
+                            "src": "415:6:0"
+                          }
+                        ],
+                        "id": 47,
+                        "name": "Assignment",
+                        "src": "398:23:0"
+                      }
+                    ],
+                    "id": 48,
+                    "name": "ExpressionStatement",
+                    "src": "398:23:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "Timestamp",
+                              "referencedDeclaration": 9,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 29,
+                                  "type": "struct DataStore.Data memory",
+                                  "value": "newData"
+                                },
+                                "id": 49,
+                                "name": "Identifier",
+                                "src": "431:7:0"
+                              }
+                            ],
+                            "id": 51,
+                            "name": "MemberAccess",
+                            "src": "431:17:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 142,
+                              "type": "uint256",
+                              "value": "now"
+                            },
+                            "id": 52,
+                            "name": "Identifier",
+                            "src": "451:3:0"
+                          }
+                        ],
+                        "id": 53,
+                        "name": "Assignment",
+                        "src": "431:23:0"
+                      }
+                    ],
+                    "id": 54,
+                    "name": "ExpressionStatement",
+                    "src": "431:23:0"
+                  },
+                  {
+                    "attributes": {
+                      "falseBody": null
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "commonType": {
+                            "typeIdentifier": "t_uint16",
+                            "typeString": "uint16"
+                          },
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "!=",
+                          "type": "bool"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 19,
+                              "type": "uint16",
+                              "value": "MapCount"
+                            },
+                            "id": 55,
+                            "name": "Identifier",
+                            "src": "469:8:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "30",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "number",
+                              "type": "int_const 0",
+                              "value": "0"
+                            },
+                            "id": 56,
+                            "name": "Literal",
+                            "src": "481:1:0"
+                          }
+                        ],
+                        "id": 57,
+                        "name": "BinaryOperation",
+                        "src": "469:13:0"
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "operator": "=",
+                                  "type": "uint256"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": true,
+                                      "member_name": "PreviousId",
+                                      "referencedDeclaration": 7,
+                                      "type": "uint256"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 29,
+                                          "type": "struct DataStore.Data memory",
+                                          "value": "newData"
+                                        },
+                                        "id": 58,
+                                        "name": "Identifier",
+                                        "src": "498:7:0"
+                                      }
+                                    ],
+                                    "id": 60,
+                                    "name": "MemberAccess",
+                                    "src": "498:18:0"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "member_name": "Id",
+                                      "referencedDeclaration": 5,
+                                      "type": "uint256"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "isConstant": false,
+                                          "isLValue": true,
+                                          "isPure": false,
+                                          "lValueRequested": false,
+                                          "type": "struct DataStore.Data storage ref"
+                                        },
+                                        "children": [
+                                          {
+                                            "attributes": {
+                                              "argumentTypes": null,
+                                              "overloadedDeclarations": [
+                                                null
+                                              ],
+                                              "referencedDeclaration": 16,
+                                              "type": "mapping(uint256 => struct DataStore.Data storage ref)",
+                                              "value": "Map"
+                                            },
+                                            "id": 61,
+                                            "name": "Identifier",
+                                            "src": "519:3:0"
+                                          },
+                                          {
+                                            "attributes": {
+                                              "argumentTypes": null,
+                                              "commonType": {
+                                                "typeIdentifier": "t_uint16",
+                                                "typeString": "uint16"
+                                              },
+                                              "isConstant": false,
+                                              "isLValue": false,
+                                              "isPure": false,
+                                              "lValueRequested": false,
+                                              "operator": "-",
+                                              "type": "uint16"
+                                            },
+                                            "children": [
+                                              {
+                                                "attributes": {
+                                                  "argumentTypes": null,
+                                                  "overloadedDeclarations": [
+                                                    null
+                                                  ],
+                                                  "referencedDeclaration": 19,
+                                                  "type": "uint16",
+                                                  "value": "MapCount"
+                                                },
+                                                "id": 62,
+                                                "name": "Identifier",
+                                                "src": "523:8:0"
+                                              },
+                                              {
+                                                "attributes": {
+                                                  "argumentTypes": null,
+                                                  "hexvalue": "31",
+                                                  "isConstant": false,
+                                                  "isLValue": false,
+                                                  "isPure": true,
+                                                  "lValueRequested": false,
+                                                  "subdenomination": null,
+                                                  "token": "number",
+                                                  "type": "int_const 1",
+                                                  "value": "1"
+                                                },
+                                                "id": 63,
+                                                "name": "Literal",
+                                                "src": "532:1:0"
+                                              }
+                                            ],
+                                            "id": 64,
+                                            "name": "BinaryOperation",
+                                            "src": "523:10:0"
+                                          }
+                                        ],
+                                        "id": 65,
+                                        "name": "IndexAccess",
+                                        "src": "519:15:0"
+                                      }
+                                    ],
+                                    "id": 66,
+                                    "name": "MemberAccess",
+                                    "src": "519:18:0"
+                                  }
+                                ],
+                                "id": 67,
+                                "name": "Assignment",
+                                "src": "498:39:0"
+                              }
+                            ],
+                            "id": 68,
+                            "name": "ExpressionStatement",
+                            "src": "498:39:0"
+                          }
+                        ],
+                        "id": 69,
+                        "name": "Block",
+                        "src": "484:64:0"
+                      }
+                    ],
+                    "id": 70,
+                    "name": "IfStatement",
+                    "src": "465:83:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "struct DataStore.Data storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "type": "struct DataStore.Data storage ref"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 16,
+                                  "type": "mapping(uint256 => struct DataStore.Data storage ref)",
+                                  "value": "Map"
+                                },
+                                "id": 71,
+                                "name": "Identifier",
+                                "src": "558:3:0"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 19,
+                                  "type": "uint16",
+                                  "value": "MapCount"
+                                },
+                                "id": 72,
+                                "name": "Identifier",
+                                "src": "562:8:0"
+                              }
+                            ],
+                            "id": 73,
+                            "name": "IndexAccess",
+                            "src": "558:13:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 29,
+                              "type": "struct DataStore.Data memory",
+                              "value": "newData"
+                            },
+                            "id": 74,
+                            "name": "Identifier",
+                            "src": "574:7:0"
+                          }
+                        ],
+                        "id": 75,
+                        "name": "Assignment",
+                        "src": "558:23:0"
+                      }
+                    ],
+                    "id": 76,
+                    "name": "ExpressionStatement",
+                    "src": "558:23:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "++",
+                          "prefix": false,
+                          "type": "uint16"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 19,
+                              "type": "uint16",
+                              "value": "MapCount"
+                            },
+                            "id": 77,
+                            "name": "Identifier",
+                            "src": "591:8:0"
+                          }
+                        ],
+                        "id": 78,
+                        "name": "UnaryOperation",
+                        "src": "591:10:0"
+                      }
+                    ],
+                    "id": 79,
+                    "name": "ExpressionStatement",
+                    "src": "591:10:0"
+                  }
+                ],
+                "id": 80,
+                "name": "Block",
+                "src": "305:303:0"
+              }
+            ],
+            "id": 81,
+            "name": "FunctionDefinition",
+            "src": "241:367:0"
+          },
+          {
+            "attributes": {
+              "constant": true,
+              "implemented": true,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "GetMapCount",
+              "payable": false,
+              "scope": 128,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 82,
+                "name": "ParameterList",
+                "src": "634:2:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 89,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint16",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint16",
+                          "type": "uint16"
+                        },
+                        "id": 83,
+                        "name": "ElementaryTypeName",
+                        "src": "658:6:0"
+                      }
+                    ],
+                    "id": 84,
+                    "name": "VariableDeclaration",
+                    "src": "658:6:0"
+                  }
+                ],
+                "id": 85,
+                "name": "ParameterList",
+                "src": "657:8:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 85
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "overloadedDeclarations": [
+                            null
+                          ],
+                          "referencedDeclaration": 19,
+                          "type": "uint16",
+                          "value": "MapCount"
+                        },
+                        "id": 86,
+                        "name": "Identifier",
+                        "src": "683:8:0"
+                      }
+                    ],
+                    "id": 87,
+                    "name": "Return",
+                    "src": "676:15:0"
+                  }
+                ],
+                "id": 88,
+                "name": "Block",
+                "src": "666:32:0"
+              }
+            ],
+            "id": 89,
+            "name": "FunctionDefinition",
+            "src": "614:84:0"
+          },
+          {
+            "attributes": {
+              "constant": true,
+              "implemented": true,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "GetDataByNumber",
+              "payable": false,
+              "scope": 128,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "number",
+                      "scope": 127,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint16",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint16",
+                          "type": "uint16"
+                        },
+                        "id": 90,
+                        "name": "ElementaryTypeName",
+                        "src": "729:6:0"
+                      }
+                    ],
+                    "id": 91,
+                    "name": "VariableDeclaration",
+                    "src": "729:13:0"
+                  }
+                ],
+                "id": 92,
+                "name": "ParameterList",
+                "src": "728:15:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 127,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string memory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string storage pointer"
+                        },
+                        "id": 93,
+                        "name": "ElementaryTypeName",
+                        "src": "765:6:0"
+                      }
+                    ],
+                    "id": 94,
+                    "name": "VariableDeclaration",
+                    "src": "765:6:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 127,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 95,
+                        "name": "ElementaryTypeName",
+                        "src": "773:4:0"
+                      }
+                    ],
+                    "id": 96,
+                    "name": "VariableDeclaration",
+                    "src": "773:4:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 127,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 97,
+                        "name": "ElementaryTypeName",
+                        "src": "779:4:0"
+                      }
+                    ],
+                    "id": 98,
+                    "name": "VariableDeclaration",
+                    "src": "779:4:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 127,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 99,
+                        "name": "ElementaryTypeName",
+                        "src": "785:4:0"
+                      }
+                    ],
+                    "id": 100,
+                    "name": "VariableDeclaration",
+                    "src": "785:4:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 127,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string memory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string storage pointer"
+                        },
+                        "id": 101,
+                        "name": "ElementaryTypeName",
+                        "src": "791:6:0"
+                      }
+                    ],
+                    "id": 102,
+                    "name": "VariableDeclaration",
+                    "src": "791:6:0"
+                  }
+                ],
+                "id": 103,
+                "name": "ParameterList",
+                "src": "764:34:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 103
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isInlineArray": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "type": "tuple(string storage ref,uint256,uint256,uint256,string storage ref)"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "Name",
+                              "referencedDeclaration": 3,
+                              "type": "string storage ref"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "struct DataStore.Data storage ref"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 16,
+                                      "type": "mapping(uint256 => struct DataStore.Data storage ref)",
+                                      "value": "Map"
+                                    },
+                                    "id": 104,
+                                    "name": "Identifier",
+                                    "src": "817:3:0"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 91,
+                                      "type": "uint16",
+                                      "value": "number"
+                                    },
+                                    "id": 105,
+                                    "name": "Identifier",
+                                    "src": "821:6:0"
+                                  }
+                                ],
+                                "id": 106,
+                                "name": "IndexAccess",
+                                "src": "817:11:0"
+                              }
+                            ],
+                            "id": 107,
+                            "name": "MemberAccess",
+                            "src": "817:16:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "Id",
+                              "referencedDeclaration": 5,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "struct DataStore.Data storage ref"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 16,
+                                      "type": "mapping(uint256 => struct DataStore.Data storage ref)",
+                                      "value": "Map"
+                                    },
+                                    "id": 108,
+                                    "name": "Identifier",
+                                    "src": "835:3:0"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 91,
+                                      "type": "uint16",
+                                      "value": "number"
+                                    },
+                                    "id": 109,
+                                    "name": "Identifier",
+                                    "src": "839:6:0"
+                                  }
+                                ],
+                                "id": 110,
+                                "name": "IndexAccess",
+                                "src": "835:11:0"
+                              }
+                            ],
+                            "id": 111,
+                            "name": "MemberAccess",
+                            "src": "835:14:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "PreviousId",
+                              "referencedDeclaration": 7,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "struct DataStore.Data storage ref"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 16,
+                                      "type": "mapping(uint256 => struct DataStore.Data storage ref)",
+                                      "value": "Map"
+                                    },
+                                    "id": 112,
+                                    "name": "Identifier",
+                                    "src": "851:3:0"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 91,
+                                      "type": "uint16",
+                                      "value": "number"
+                                    },
+                                    "id": 113,
+                                    "name": "Identifier",
+                                    "src": "855:6:0"
+                                  }
+                                ],
+                                "id": 114,
+                                "name": "IndexAccess",
+                                "src": "851:11:0"
+                              }
+                            ],
+                            "id": 115,
+                            "name": "MemberAccess",
+                            "src": "851:22:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "Timestamp",
+                              "referencedDeclaration": 9,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "struct DataStore.Data storage ref"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 16,
+                                      "type": "mapping(uint256 => struct DataStore.Data storage ref)",
+                                      "value": "Map"
+                                    },
+                                    "id": 116,
+                                    "name": "Identifier",
+                                    "src": "875:3:0"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 91,
+                                      "type": "uint16",
+                                      "value": "number"
+                                    },
+                                    "id": 117,
+                                    "name": "Identifier",
+                                    "src": "879:6:0"
+                                  }
+                                ],
+                                "id": 118,
+                                "name": "IndexAccess",
+                                "src": "875:11:0"
+                              }
+                            ],
+                            "id": 119,
+                            "name": "MemberAccess",
+                            "src": "875:21:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "Secret",
+                              "referencedDeclaration": 11,
+                              "type": "string storage ref"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "struct DataStore.Data storage ref"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 16,
+                                      "type": "mapping(uint256 => struct DataStore.Data storage ref)",
+                                      "value": "Map"
+                                    },
+                                    "id": 120,
+                                    "name": "Identifier",
+                                    "src": "898:3:0"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 91,
+                                      "type": "uint16",
+                                      "value": "number"
+                                    },
+                                    "id": 121,
+                                    "name": "Identifier",
+                                    "src": "902:6:0"
+                                  }
+                                ],
+                                "id": 122,
+                                "name": "IndexAccess",
+                                "src": "898:11:0"
+                              }
+                            ],
+                            "id": 123,
+                            "name": "MemberAccess",
+                            "src": "898:18:0"
+                          }
+                        ],
+                        "id": 124,
+                        "name": "TupleExpression",
+                        "src": "816:101:0"
+                      }
+                    ],
+                    "id": 125,
+                    "name": "Return",
+                    "src": "809:108:0"
+                  }
+                ],
+                "id": 126,
+                "name": "Block",
+                "src": "799:125:0"
+              }
+            ],
+            "id": 127,
+            "name": "FunctionDefinition",
+            "src": "704:220:0"
+          }
+        ],
+        "id": 128,
+        "name": "ContractDefinition",
+        "src": "26:900:0"
+      }
+    ],
+    "id": 129,
+    "name": "SourceUnit",
+    "src": "0:927:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.18+commit.9cf6e910.Emscripten.clang"
+  },
+  "networks": {
+    "1515696728562": {
+      "events": {},
+      "links": {},
+      "address": "0x6d495ca58b1eec8d8ceb9ec851c9d28febd66972"
+    }
+  },
+  "schemaVersion": "1.0.1",
+  "updatedAt": "2018-01-11T18:54:45.463Z"
+}
