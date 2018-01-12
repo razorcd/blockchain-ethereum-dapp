@@ -12,6 +12,7 @@ import datastore_artifacts from '../../build/contracts/DataStore.json'
 var DataStore = contract(datastore_artifacts);
 
 var toAccount = ""
+var PRICE = 25; //transaction fee for adding data
 
 // The following code is simple to show off interacting with your contracts.
 // As your needs grow you will likely need to change its form and structure.
@@ -93,7 +94,7 @@ window.App = {
     var ds;
     DataStore.deployed().then(function(instance) {
       ds = instance;
-      return ds.AddNewData(id, name, 30, secret, {from: account});  // {from: account}  is needed to perform transactions !!!
+      return ds.AddNewData(id, name, secret, {from: account, value: web3.toWei(PRICE, 'ether')})   // {from: account}  is needed to perform transactions !!!
     }).then(function() {
       self.setStatus("Transaction complete!");
       self.refreshMapCount();
