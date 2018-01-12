@@ -1,4 +1,4 @@
-## Blockchain Etherium DApp
+## Blockchain Ethereum DApp
 
 ### Setup
 - install Node (developed with v8.9.2)
