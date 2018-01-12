@@ -11,6 +11,8 @@ import datastore_artifacts from '../../build/contracts/DataStore.json'
 // DataStore is our usable abstraction, which we'll use through the code below.
 var DataStore = contract(datastore_artifacts);
 
+var toAccount = ""
+
 // The following code is simple to show off interacting with your contracts.
 // As your needs grow you will likely need to change its form and structure.
 // For application bootstrapping, check out window.addEventListener below.
@@ -45,18 +47,18 @@ window.App = {
     });
   },
 
-  buildContracts() {
-    let contracts = {};
-    let meta;
+  // buildContracts() {
+  //   let contracts = {};
+  //   let meta;
 
-    let {contract_name = ''} = datastore_artifacts;
-    meta = contract(datastore_artifacts);
-    meta.setProvider(web3.currentProvider);
-    meta.defaults({from: web3.eth.coinbase});
-    contracts[contract_name] = meta;
+  //   let {contract_name = ''} = datastore_artifacts;
+  //   meta = contract(datastore_artifacts);
+  //   meta.setProvider(web3.currentProvider);
+  //   meta.defaults({from: web3.eth.coinbase});
+  //   contracts[contract_name] = meta;
 
-    return contracts;
-  },
+  //   return contracts;
+  // },
 
   setStatus: function(message) {
     var status = document.getElementById("status");
@@ -91,7 +93,7 @@ window.App = {
     var ds;
     DataStore.deployed().then(function(instance) {
       ds = instance;
-      return ds.AddNewData(id, name, secret, {from: account});  // {from: account}  is needed to perform transactions !!!
+      return ds.AddNewData(id, name, 30, secret, {from: account});  // {from: account}  is needed to perform transactions !!!
     }).then(function() {
       self.setStatus("Transaction complete!");
       self.refreshMapCount();

@@ -1,7 +1,10 @@
-pragma solidity ^0.4.17;
+pragma solidity ^0.4.18;
 
 contract DataStore {
     
+    address public creator;
+    address ReceivingAccount = 0x5AEDA56215b167893e80B4fE645BA6d5Bab767DE;
+
     struct Data {
         string Name;
         uint Id;
@@ -13,7 +16,42 @@ contract DataStore {
     mapping(uint => Data) Map;
     uint16 MapCount=0;
 
-    function AddNewData(uint Id, string Name, string Secret) public {
+    event Transfer(address indexed _from, address indexed _to, uint256 _value);
+    event LogFundsReceived(address sender, uint amount);
+    event LogFundsSent(address receiver, uint amount);
+    
+
+    function() payable {
+        LogFundsReceived(msg.sender, msg.value);
+    }
+
+    function Oursurance() payable {
+        creator = msg.sender;
+        LogFundsReceived(msg.sender, msg.value);
+    }
+
+    function kill() {
+        selfdestruct(creator);
+    }
+
+    function send(address target, uint256 amount) payable {
+        target.transfer(amount);
+        LogFundsSent(target, amount);
+    }
+
+
+    function AddNewData(uint Id, string Name, uint amount, string Secret) public payable returns(bool sufficient) {
+
+        // Transfer(msg.sender, ReceivingAccount, amount);
+        LogFundsReceived(msg.sender, msg.value);
+
+        // ReceivingAccount.transfer(TransferCost);
+        ReceivingAccount.transfer(msg.value);
+        // ReceivingAccount.send(TransferCost);
+
+        LogFundsSent(ReceivingAccount, msg.value);
+
+
         Data memory newData;
         newData.Id = Id;
         newData.Name = Name;
@@ -26,6 +64,8 @@ contract DataStore {
 
         Map[MapCount] = newData;
         MapCount++;
+
+        return true;
     }
 
     function GetMapCount() public view returns (uint16) {
